@@ -14,6 +14,10 @@ public class TallerNivelacion2Java {
         Personaje arquero = new Personaje( 
         "Legolas","Arquero",85,22,8); 
 
+        guerrero.setNivel(0);
+        mago.setNivel(75);
+        arquero.setNivel(10);
+        
         System.out.println(guerrero); 
 
         System.out.println(mago); 
@@ -28,9 +32,14 @@ public class TallerNivelacion2Java {
 
         /*System.out.println(Vida_G); // 70 
         System.out.println(Vida_M);*/
-        // 70 (sin cambio) 
+        // 70 (sin cambio)
+        
         guerrero.MostrarEstado();
         mago.MostrarEstado();
         arquero.MostrarEstado();
+        guerrero.recibirDano(25); 
+        guerrero.curar(10); 
+        System.out.println(guerrero.estaVivo()); 
+        
     }
 }
